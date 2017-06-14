@@ -12,7 +12,19 @@ package org.udc.simplehelloworld;
 public class HelloWorld {
 
     public static void main(String[] args) {
-        System.out.println("Hello World ...");
+        System.out.println(getHelloWorld());
+    }
+
+    public static String getHelloWorld() {
+
+        return "Hello World 1";
+
+    }
+
+    public static String getHelloWorld2() {
+
+        return "Hello World 2";
+
     }
 
 }
