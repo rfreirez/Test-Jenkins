@@ -18,7 +18,7 @@ public class HelloWorld {
 
     public static String getHelloWorld() {
 
-        return "Hola Mundo";
+        return "Hello World";
 
     }
 
