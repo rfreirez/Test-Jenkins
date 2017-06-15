@@ -44,7 +44,7 @@ node {
    // requires SonarQube Scanner
    def scannerHome = tool 'sonar-runner';
     withSonarQubeEnv('My SonarQube Server') {
-      sh "${scannerHome}/bin/sonar-scanner"
+      sh "${SONAR_RUNNER_HOME}/bin/sonar-scanner"
     }
   
    
