@@ -42,12 +42,9 @@ node {
    stage 'SonarQube analysis' 
    echo 'Ejecutando análisis Sonarqube'
    // requires SonarQube Scanner
-   def scannerHome = tool 'sonar-runner';
-   sonarScanner properties: 
-      '''sonar.projectKey=foo
-         sonar.sources=src'''
-    withSonarQubeEnv('My SonarQube Server') {
-      sh 'mvn clean package sonar:sonar'
+   def scannerHome = tool 'sonar-runner';   
+    withSonarQubeEnv('sonarqube') {
+      //sh 'mvn clean package sonar:sonar'
        //sh "${SONAR_RUNNER_HOME}/bin/sonar-scanner"
     }
   
