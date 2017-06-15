@@ -36,19 +36,6 @@ node {
          currentBuild.result = 'FAILURE'
       throw err
    }
-   // ------------------------------------
-   // -- ETAPA: Análisis SONARQube
-   // ------------------------------------
-   stage 'SonarQube analysis' 
-   echo 'Ejecutando análisis Sonarqube'
-   // requires SonarQube Scanner
-   def scannerHome = tool 'sonar-runner';   
-    withSonarQubeEnv('sonarqube') {
-      //sh 'mvn clean package sonar:sonar'
-      //sh "${SONAR_RUNNER_HOME}/bin/sonar-scanner"
-      sh "${scannerHome}/bin/sonar-scanner"
-    }
-  
    
    // ------------------------------------
    // -- ETAPA: Instalar
