@@ -6,7 +6,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building...'
-                sh '/var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/m3/bin/mvn clean install'
+                //sh '/var/jenkins_home/tools/hudson.tasks.Maven_MavenInstallation/m3/bin/mvn clean install'
+                sh 'mvn clean install'
             }
         }
     }
